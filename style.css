@@ -1,44 +1,50 @@
-/* Hiệu ứng lắc nút */
-@keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: pink;
+    font-family: 'Arial', sans-serif;
 }
 
-.button:hover { 
-  animation: shake 0.8s; 
+.container {
+    text-align: center;
 }
 
-/* Hiệu ứng hình trái tim */
-.heart {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 16px;
+h1 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 0 10px red;
+    animation: heartbeat 1s infinite;
 }
 
-.heart:before, .heart:after {
-  content: ""; 
-  position: absolute;
-  width: 8px;
-  height: 16px;
-  background-color: #f00; 
-  border-radius: 8px 8px 0 0;
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
-.heart:before {
- left: 0; 
- transform: rotate(-45deg);  
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.heart:after {
-  right: 0;
-  transform: rotate(45deg); 
+
+#yes-btn {
+    color: green;
+}
+
+#no-btn {
+    color: red;
 }
