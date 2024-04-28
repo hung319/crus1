@@ -1,7 +1,5 @@
-function showResult() {
-    var result = document.getElementById("result");
-    result.style.display = "block";
-
-    // Thay đổi nội dung kết quả theo ý muốn
-    result.innerHTML = "<p>...</p>";
-}
+document.getElementById('no-btn').addEventListener('mouseover', function() {
+    this.style.position = 'absolute';
+    this.style.top = Math.random() * window.innerHeight + 'px';
+    this.style.left = Math.random() * window.innerWidth + 'px';
+});
