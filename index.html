@@ -13,19 +13,35 @@
             font-size: 2em;
             color: white;
         }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes-button {
+            background-color: lightgreen;
+        }
+        .no-button {
+            background-color: red;
+        }
     </style>
 </head>
 <body>
-    <div id="message"></div>
+    <div id="message">Em có yêu anh không?</div>
+    <button class="button yes-button" onclick="reply('Có')">Có</button>
+    <button class="button no-button" onclick="reply('Không')">Không</button>
     <script>
-        var messages = ["Em à, anh có điều muốn nói...", "Anh yêu em, em có yêu anh không?"];
-        var currentMessage = 0;
-        function showMessage() {
-            if(currentMessage >= messages.length) return;
-            document.getElementById('message').innerText = messages[currentMessage++];
-            setTimeout(showMessage, 3000);
+        function reply(answer) {
+            var message = document.getElementById('message');
+            if(answer === 'Có') {
+                message.innerHTML = "Anh cũng yêu em 💖";
+            } else {
+                message.innerHTML = "Anh sẽ luôn chờ đợi em 💔";
+            }
         }
-        showMessage();
     </script>
 </body>
 </html>
