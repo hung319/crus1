@@ -1,47 +1,18 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web Tỏ Tình</title>
-    <style>
-        body {
-            background-color: pink;
-            text-align: center;
-            padding-top: 50px;
-        }
-        #message {
-            font-size: 2em;
-            color: white;
-        }
-        .button {
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .yes-button {
-            background-color: lightgreen;
-        }
-        .no-button {
-            background-color: red;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tỏ Tình</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="message">Em có yêu anh không?</div>
-    <button class="button yes-button" onclick="reply('Có')">Có</button>
-    <button class="button no-button" onclick="reply('Không')">Không</button>
-    <script>
-        function reply(answer) {
-            var message = document.getElementById('message');
-            if(answer === 'Có') {
-                message.innerHTML = "Anh cũng yêu em 💖";
-            } else {
-                message.innerHTML = "Anh sẽ luôn chờ đợi em 💔";
-            }
-        }
-    </script>
+    <div class="container">
+        <h1>I Love You!</h1>
+        <p>Em có muốn là người duy nhất trong trái tim anh không?</p>
+        <button id="yes-btn">Có</button>
+        <button id="no-btn">Không</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
