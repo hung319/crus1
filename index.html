@@ -13,6 +13,7 @@
         }
         h1 {
             color: #ff6b6b;
+            animation: bounce 2s ease-in-out infinite; /* Makes the heading bounce */
         }
         button {
             background-color: #ff6b6b;
@@ -22,9 +23,30 @@
             margin: 10px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            transform: scale(0.8); /* Make buttons smaller to start */
+            animation: pop 0.5s ease-in-out forwards; /* Buttons 'pop' into place on load */
         }
         button:hover {
             background-color: #ff8c8c;
+        }
+
+        /* Keyframe animations */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            30%, 50%, 70% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pop {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1); 
+            }
         }
     </style>
 </head>
