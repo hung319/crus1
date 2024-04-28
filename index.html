@@ -5,54 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yêu Bảo bối</title>
     <style>
-        /* CSS goes here, at the top of the page */
         body {
             background-color: #f9f9f9;
             font-family: Arial, sans-serif;
-            text-align: center;
+            text-align: center; /* No longer needed if you use flexbox */
         }
-        h1 {
-            color: #ff6b6b;
-            animation: bounce 2s ease-in-out infinite; /* Makes the heading bounce */
-        }
-        button {
-            background-color: #ff6b6b;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            transform: scale(0.8); /* Make buttons smaller to start */
-            animation: pop 0.5s ease-in-out forwards; /* Buttons 'pop' into place on load */
-        }
-        button:hover {
-            background-color: #ff8c8c;
-        }
+        /* ... rest of your styles ... */
 
-        /* Keyframe animations */
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            30%, 50%, 70% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @keyframes pop {
-            from {
-                transform: scale(0.8);
-            }
-            to {
-                transform: scale(1); 
-            }
-        }
+        .content {
+            display: flex;          
+            flex-direction: column; 
+            align-items: center;    
+            justify-content: center;
+            min-height: 100vh;     
+        } 
     </style>
 </head>
 <body>
-    <h1>Em có yêu anh không?</h1>
-    <button onclick="alert('Anh cũng yêu em :>')">Có</button>
-    <button onclick="alert('Đừng ngoan cố thế chọn nút kia đi!')">Không</button>
+    <div class="content">
+        <h1>Em có yêu anh không?</h1>
+        <button onclick="alert('Anh cũng yêu em :>')">Có</button>
+        <button onclick="alert('Đừng ngoan cố thế chọn nút kia đi!')">Không</button>
+    </div>
 </body>
 </html>
