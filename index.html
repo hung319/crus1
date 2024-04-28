@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Trang Web Tỏ Tình</title>
-<style>
-  /* Thêm các định dạng CSS của bạn ở đây */
-</style>
-<script>
-  function showLoveMessage() {
-    alert('Yêu em nhiều lắm 💖!');
-  }
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web tỏ tình</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Em Có Thích Anh Không?</h1>
-  <p>Nếu em cảm thấy hạnh phúc và muốn chia sẻ nó với anh, hãy nhấn vào nút bên dưới nhé!</p>
-  <!-- Thêm sự kiện onclick vào nút -->
-  <button onclick="showLoveMessage()">Có, em thích anh!</button>
+    <div class="container">
+        <h1>Lời tỏ tình</h1>
+        <p>Xin chào [Tên người ấy],</p>
+
+        <p>Từ lâu nay, tớ đã...</p>
+
+        <p>Và tớ muốn...</p>
+
+        <p>Bạn có thể...</p>
+
+        <button onclick="showResult()">Kết quả</button>
+
+        <div id="result" style="display: none;">
+            <p>...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
