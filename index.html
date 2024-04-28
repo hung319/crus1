@@ -2,28 +2,30 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang web tỏ tình</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Web Tỏ Tình</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #message {
+            font-size: 2em;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Lời tỏ tình</h1>
-        <p>Xin chào [Tên người ấy],</p>
-
-        <p>Từ lâu nay, tớ đã...</p>
-
-        <p>Và tớ muốn...</p>
-
-        <p>Bạn có thể...</p>
-
-        <button onclick="showResult()">Kết quả</button>
-
-        <div id="result" style="display: none;">
-            <p>...</p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <div id="message"></div>
+    <script>
+        var messages = ["Em à, anh có điều muốn nói...", "Anh yêu em, em có yêu anh không?"];
+        var currentMessage = 0;
+        function showMessage() {
+            if(currentMessage >= messages.length) return;
+            document.getElementById('message').innerText = messages[currentMessage++];
+            setTimeout(showMessage, 3000);
+        }
+        showMessage();
+    </script>
 </body>
 </html>
