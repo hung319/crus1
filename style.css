@@ -1,31 +1,44 @@
-body {
-    font-family: sans-serif;
-    text-align: center;
+/* Hiệu ứng lắc nút */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
-.container {
-    width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
+.button:hover { 
+  animation: shake 0.8s; 
 }
 
-h1 {
-    color: #f00;
+/* Hiệu ứng hình trái tim */
+.heart {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 16px;
 }
 
-p {
-    margin-bottom: 10px;
+.heart:before, .heart:after {
+  content: ""; 
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  background-color: #f00; 
+  border-radius: 8px 8px 0 0;
 }
-
-button {
-    padding: 10px 20px;
-    background-color: #00f;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+.heart:before {
+ left: 0; 
+ transform: rotate(-45deg);  
 }
-
-#result {
-    margin-top: 20px;
+.heart:after {
+  right: 0;
+  transform: rotate(45deg); 
 }
